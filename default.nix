@@ -1,5 +1,6 @@
 { stdenv,
   callPackage,
+  fetchFromGitHub,
   python38,
   python38Packages,
   curl,
