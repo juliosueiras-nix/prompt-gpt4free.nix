@@ -16,7 +16,7 @@ let
       owner = "xtekky";
       repo = "gpt4free";
       rev = "3c579964ad0a7f0311c29ea8efd365744b6fe8dd";
-      sha256 = "";
+      sha256 = "smDi8GvoBhMNUvswDAfFT74pzY2xb3S1SuKAoq17euo=";
     };
 
     installPhase = ''
