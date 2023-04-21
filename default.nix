@@ -47,6 +47,6 @@ let
       cp ${cacert}/etc/ssl/certs/ca-bundle.crt $out/lib/python3.8/site-packages/curl_cffi/cacert.pem
     '';
   };
-in writeShellScriptBin "promptgpt" ''
+in writeShellScriptBin "prompt" ''
   ${python38.withPackages (p: [ curl_cffi ])}/bin/python ${gpt4all}/prompt.py "$1"
 ''
