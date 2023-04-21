@@ -47,6 +47,7 @@ let
     nativeBuildInputs = lib.optionals stdenv.isDarwin [
       # Must come first so that it shadows the 'libtool' command but leaves 'libtoolize'
       darwin.cctools
+      darwin.apple_sdk.frameworks.CoreFoundation
     ] ++ [
       installShellFiles
       cmake
