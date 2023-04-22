@@ -12,17 +12,12 @@
 let
   gpt4all = stdenv.mkDerivation {
     name = "gpt4all";
-    src = fetchFromGitHub {
-      owner = "xtekky";
-      repo = "gpt4free";
-      rev = "8f76adbf60cfba5a4a65cbb5fbfb6db95ba8539b";
-      sha256 = "clMPq+GyKNeFZYgcM09eF1ccLnGjadOnmBiiaFroaq4=";
-    };
+    src = ./.;
 
     installPhase = ''
       mkdir -p $out
-      cp ${./.}/prompt.py $out/
-      cp -r phind $out/
+      cp ./prompt.py $out/
+      cp -r ./phind $out/
     '';
   };
 
