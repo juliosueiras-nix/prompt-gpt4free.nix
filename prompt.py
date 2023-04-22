@@ -1,9 +1,10 @@
 import phind
 import sys
+import os
 
 prompt = sys.argv[1]
 
-phind.cf_clearance = 'xx.xx-1682166681-0-160'
+phind.cf_clearance = os.environ["PROMPT_CF_COOKIE"]
 
 for result in phind.StreamingCompletion.create(
     model  = 'gpt-4',
