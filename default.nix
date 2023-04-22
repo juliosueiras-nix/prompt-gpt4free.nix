@@ -15,8 +15,8 @@ let
     src = fetchFromGitHub {
       owner = "xtekky";
       repo = "gpt4free";
-      rev = "3c579964ad0a7f0311c29ea8efd365744b6fe8dd";
-      sha256 = "smDi8GvoBhMNUvswDAfFT74pzY2xb3S1SuKAoq17euo=";
+      rev = "8f76adbf60cfba5a4a65cbb5fbfb6db95ba8539b";
+      sha256 = "clMPq+GyKNeFZYgcM09eF1ccLnGjadOnmBiiaFroaq4=";
     };
 
     installPhase = ''
