@@ -193,9 +193,7 @@ class StreamingCompletion:
                 'creative': creative
             }
         }
-        
-        print(cf_clearance)
-        
+                
         headers = {
             'authority': 'www.phind.com',
             'accept': '*/*',
