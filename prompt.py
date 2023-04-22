@@ -3,6 +3,8 @@ import sys
 
 prompt = sys.argv[1]
 
+phind.cf_clearance = 'xx.xx-1682166681-0-160'
+
 for result in phind.StreamingCompletion.create(
     model  = 'gpt-4',
     prompt = prompt,
