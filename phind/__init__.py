@@ -10,7 +10,7 @@ import os
 from curl_cffi.requests import post
 
 cf_clearance = ''
-chrome_version = os.environ["CHROME_VERSION"]
+user_agent = os.environ["PROMPT_USER_AGENT"]
 
 class PhindResponse:
     
@@ -86,7 +86,7 @@ class Search:
             'sec-fetch-dest': 'empty',
             'sec-fetch-mode': 'cors',
             'sec-fetch-site': 'same-origin',
-            'user-agent': f'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{chrome_version}.0.4896.60 Safari/537.36',
+            'user-agent': user_agent,
         }
         
         return post('https://www.phind.com/api/bing/search', headers = headers, json = { 
@@ -144,7 +144,7 @@ class Completion:
             'sec-fetch-dest': 'empty',
             'sec-fetch-mode': 'cors',
             'sec-fetch-site': 'same-origin',
-            'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.60 Safari/537.36',
+            'user-agent': user_agent,
         }
         
         completion = ''
@@ -210,7 +210,7 @@ class StreamingCompletion:
             'sec-fetch-dest': 'empty',
             'sec-fetch-mode': 'cors',
             'sec-fetch-site': 'same-origin',
-            'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.60 Safari/537.36',
+            'user-agent': user_agent,
         }
         
         response   = post('https://www.phind.com/api/infer/answer', 
